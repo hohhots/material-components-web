@@ -1,5 +1,5 @@
 {
-  "name": "@material/icon-button",
+  "name": "@mongol/icon-button",
   "description": "The Material Components for the web icon button component",
   "version": "1.0.1",
   "license": "MIT",
@@ -19,9 +19,9 @@
     "url": "https://github.com/material-components/material-components-web.git"
   },
   "dependencies": {
-    "@material/base": "^1.0.0",
-    "@material/ripple": "^1.0.1",
-    "@material/theme": "^1.0.0",
+    "@mongol/base": "^1.0.0",
+    "@mongol/ripple": "^1.0.1",
+    "@mongol/theme": "^1.0.0",
     "tslib": "^1.9.3"
   },
   "publishConfig": {

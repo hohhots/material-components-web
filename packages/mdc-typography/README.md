@@ -62,7 +62,7 @@ We recommend using Roboto from Google Fonts:
 ### Styles
 
 ```css
-@import "@material/typography/mdc-typography";
+@import "@mongol/typography/mdc-typography";
 ```
 
 ## Style Customization
@@ -134,7 +134,7 @@ $mdc-typography-styles-button: (
   text-transform: none,
 );
 
-@import "@material/button/mdc-button";
+@import "@mongol/button/mdc-button";
 ```
 
 Example: Overriding the global `font-family` property. 

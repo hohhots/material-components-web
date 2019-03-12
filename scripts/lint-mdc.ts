@@ -172,7 +172,7 @@ function checkOneImportPath(
   // Make sure npm modules are specified in package.json dependencies
   if (isMaterialNpmImport || isThirdPartyImport) {
     const expectedNpmDep = importPath
-        // "@material/foo/bar" -> "@material/foo"
+        // "@mongol/foo/bar" -> "@mongol/foo"
         .replace(new RegExp('^(@[^/]+/[^/]+)/.+'), '$1')
         // "focus-trap/foo" -> "focus-trap"
         .replace(new RegExp('^([^@][^/]+)/.+'), '$1')

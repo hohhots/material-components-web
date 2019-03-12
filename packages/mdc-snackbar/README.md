@@ -57,7 +57,7 @@ npm install @material/snackbar
 ### Styles
 
 ```scss
-@import "@material/snackbar/mdc-snackbar";
+@import "@mongol/snackbar/mdc-snackbar";
 ```
 
 ### JavaScript Instantiation

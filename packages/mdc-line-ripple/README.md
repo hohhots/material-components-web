@@ -38,7 +38,7 @@ npm install @material/line-ripple
 ### Styles
 
 ```scss
-@import "@material/line-ripple/mdc-line-ripple";
+@import "@mongol/line-ripple/mdc-line-ripple";
 ```
 
 ### JavaScript Instantiation

@@ -1,5 +1,5 @@
 {
-  "name": "@material/dom",
+  "name": "@mongol/dom",
   "description": "DOM manipulation utilities for Material Components for the web",
   "version": "1.0.1",
   "license": "MIT",

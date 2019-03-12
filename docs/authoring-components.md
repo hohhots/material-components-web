@@ -522,7 +522,7 @@ For example, if you are building a checkbox component, `keywords` would include 
 
 ```json
 {
-  "name": "@material/example",
+  "name": "@mongol/example",
   "version": "0.0.0",
   "description": "The Material Components for the web example component",
   "license": "MIT",

@@ -56,9 +56,9 @@ npm install @material/menu
 ### Styles
 
 ```scss
-@import "@material/list/mdc-list";
-@import "@material/menu-surface/mdc-menu-surface";
-@import "@material/menu/mdc-menu";
+@import "@mongol/list/mdc-list";
+@import "@mongol/menu-surface/mdc-menu-surface";
+@import "@mongol/menu/mdc-menu";
 ```
 
 ### JavaScript Instantiation

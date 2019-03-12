@@ -31,8 +31,8 @@ npm install @material/shape
 ### Styles
 
 ```scss
-@import "@material/shape/mixins";
-@import "@material/shape/functions";
+@import "@mongol/shape/mixins";
+@import "@mongol/shape/functions";
 ```
 
 ## Style Customization
@@ -103,7 +103,7 @@ Where, only top-right & bottom-right corners are customizable and it automatical
 The styles for applying custom shape to button component instance looks like this:
 
 ```scss
-@import "@material/button/mixins";
+@import "@mongol/button/mixins";
 
 .my-custom-button {
   @include mdc-button-shape-radius(50%);

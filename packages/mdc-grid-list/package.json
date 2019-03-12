@@ -1,5 +1,5 @@
 {
-  "name": "@material/grid-list",
+  "name": "@mongol/grid-list",
   "version": "1.0.1",
   "description": "The Material Components for the web grid list component",
   "license": "MIT",
@@ -17,10 +17,10 @@
     "grid list"
   ],
   "dependencies": {
-    "@material/base": "^1.0.0",
-    "@material/rtl": "^0.42.0",
-    "@material/theme": "^1.0.0",
-    "@material/typography": "^1.0.0",
+    "@mongol/base": "^1.0.0",
+    "@mongol/rtl": "^0.42.0",
+    "@mongol/theme": "^1.0.0",
+    "@mongol/typography": "^1.0.0",
     "tslib": "^1.9.3"
   },
   "publishConfig": {
