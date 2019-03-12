@@ -1,5 +1,5 @@
 {
-  "name": "@material/menu",
+  "name": "@mongol/menu",
   "version": "1.0.1",
   "description": "The Material Components for the web menu component",
   "license": "MIT",
@@ -17,12 +17,12 @@
     "url": "https://github.com/material-components/material-components-web.git"
   },
   "dependencies": {
-    "@material/base": "^1.0.0",
-    "@material/feature-targeting": "^0.44.1",
-    "@material/list": "^1.0.1",
-    "@material/menu-surface": "^1.0.1",
-    "@material/ripple": "^1.0.1",
-    "@material/rtl": "^0.42.0",
+    "@mongol/base": "^1.0.0",
+    "@mongol/feature-targeting": "^0.44.1",
+    "@mongol/list": "^1.0.1",
+    "@mongol/menu-surface": "^1.0.1",
+    "@mongol/ripple": "^1.0.1",
+    "@mongol/rtl": "^0.42.0",
     "tslib": "^1.9.3"
   }
 }

@@ -50,7 +50,7 @@ npm install @material/menu-surface
 ### Styles
 
 ```css
-@import "@material/menu-surface/mdc-menu-surface";
+@import "@mongol/menu-surface/mdc-menu-surface";
 ```
 
 ### JavaScript Instantiation

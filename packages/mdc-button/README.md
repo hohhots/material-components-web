@@ -50,7 +50,7 @@ npm install @material/button
 ### Styles
 
 ```scss
-@import "@material/button/mdc-button";
+@import "@mongol/button/mdc-button";
 ```
 
 ### JavaScript Instantiation

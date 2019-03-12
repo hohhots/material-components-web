@@ -1,5 +1,5 @@
 {
-  "name": "@material/chips",
+  "name": "@mongol/chips",
   "description": "The Material Components for the Web chips component",
   "version": "1.0.1",
   "license": "MIT",
@@ -20,14 +20,14 @@
     "access": "public"
   },
   "dependencies": {
-    "@material/animation": "^1.0.0",
-    "@material/base": "^1.0.0",
-    "@material/checkbox": "^1.0.1",
-    "@material/elevation": "^1.0.0",
-    "@material/ripple": "^1.0.1",
-    "@material/shape": "^1.0.0",
-    "@material/theme": "^1.0.0",
-    "@material/typography": "^1.0.0",
+    "@mongol/animation": "^1.0.0",
+    "@mongol/base": "^1.0.0",
+    "@mongol/checkbox": "^1.0.1",
+    "@mongol/elevation": "^1.0.0",
+    "@mongol/ripple": "^1.0.1",
+    "@mongol/shape": "^1.0.0",
+    "@mongol/theme": "^1.0.0",
+    "@mongol/typography": "^1.0.0",
     "tslib": "^1.9.3"
   }
 }

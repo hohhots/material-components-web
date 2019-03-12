@@ -20,8 +20,8 @@
 // THE SOFTWARE.
 //
 
-@import "@material/animation/variables";
-@import "@material/theme/mixins";
+@import "@mongol/animation/variables";
+@import "@mongol/theme/mixins";
 @import "./variables";
 
 @mixin mdc-checkbox-container-keyframes_(

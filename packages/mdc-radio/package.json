@@ -1,5 +1,5 @@
 {
-  "name": "@material/radio",
+  "name": "@mongol/radio",
   "description": "The Material Components for the web radio component",
   "version": "1.0.1",
   "license": "MIT",
@@ -17,11 +17,11 @@
     "url": "https://github.com/material-components/material-components-web.git"
   },
   "dependencies": {
-    "@material/animation": "^1.0.0",
-    "@material/base": "^1.0.0",
-    "@material/feature-targeting": "^0.44.1",
-    "@material/ripple": "^1.0.1",
-    "@material/theme": "^1.0.0",
+    "@mongol/animation": "^1.0.0",
+    "@mongol/base": "^1.0.0",
+    "@mongol/feature-targeting": "^0.44.1",
+    "@mongol/ripple": "^1.0.1",
+    "@mongol/theme": "^1.0.0",
     "tslib": "^1.9.3"
   }
 }

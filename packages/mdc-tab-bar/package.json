@@ -1,5 +1,5 @@
 {
-  "name": "@material/tab-bar",
+  "name": "@mongol/tab-bar",
   "description": "The Material Components for the web tab bar component",
   "version": "1.0.1",
   "license": "MIT",
@@ -18,10 +18,10 @@
     "url": "https://github.com/material-components/material-components-web.git"
   },
   "dependencies": {
-    "@material/base": "^1.0.0",
-    "@material/elevation": "^1.0.0",
-    "@material/tab": "^1.0.1",
-    "@material/tab-scroller": "^1.0.1",
+    "@mongol/base": "^1.0.0",
+    "@mongol/elevation": "^1.0.0",
+    "@mongol/tab": "^1.0.1",
+    "@mongol/tab-scroller": "^1.0.1",
     "tslib": "^1.9.3"
   },
   "publishConfig": {

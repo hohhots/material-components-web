@@ -65,8 +65,8 @@ We recommend using MDC Checkbox with [MDC Form Field](../mdc-form-field) for enh
 ### Styles
 
 ```scss
-@import "@material/form-field/mdc-form-field";
-@import "@material/checkbox/mdc-checkbox";
+@import "@mongol/form-field/mdc-form-field";
+@import "@mongol/checkbox/mdc-checkbox";
 ```
 
 ### JavaScript Instantiation

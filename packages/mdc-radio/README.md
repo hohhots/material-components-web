@@ -56,8 +56,8 @@ We recommend using MDC Radio with [MDC Form Field](../mdc-form-field) for enhanc
 ### Styles
 
 ```scss
-@import "@material/form-field/mdc-form-field";
-@import "@material/radio/mdc-radio";
+@import "@mongol/form-field/mdc-form-field";
+@import "@mongol/radio/mdc-radio";
 ```
 
 ### JavaScript Instantiation

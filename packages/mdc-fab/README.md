@@ -64,7 +64,7 @@ However, you can also use SVG, [Font Awesome](https://fontawesome.com/), or any 
 ### Styles
 
 ```scss
-@import "@material/fab/mdc-fab";
+@import "@mongol/fab/mdc-fab";
 ```
 
 ### JavaScript Instantiation

@@ -1,5 +1,5 @@
 {
-  "name": "@material/animation",
+  "name": "@mongol/animation",
   "description": "Animation Variables and Mixins used by Material Components for the web",
   "version": "1.0.0",
   "license": "MIT",

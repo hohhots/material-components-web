@@ -20,8 +20,8 @@
 // THE SOFTWARE.
 //
 
-@import "@material/feature-targeting/functions";
-@import "@material/feature-targeting/mixins";
+@import "@mongol/feature-targeting/functions";
+@import "@mongol/feature-targeting/mixins";
 @import "./variables";
 
 @mixin mdc-typography-core-styles($query: mdc-feature-all()) {

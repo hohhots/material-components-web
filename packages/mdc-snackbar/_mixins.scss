@@ -20,9 +20,9 @@
 // THE SOFTWARE.
 //
 
-@import "@material/elevation/mixins";
-@import "@material/shape/mixins";
-@import "@material/theme/mixins";
+@import "@mongol/elevation/mixins";
+@import "@mongol/shape/mixins";
+@import "@mongol/theme/mixins";
 @import "./variables";
 
 @mixin mdc-snackbar-fill-color($color) {

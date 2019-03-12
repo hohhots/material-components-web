@@ -66,7 +66,7 @@ However, you can also use SVG, [Font Awesome](https://fontawesome.com/), or any 
 ### Styles
 
 ```scss
-@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@mongol/top-app-bar/mdc-top-app-bar";
 ```
 
 ### JavaScript Instantiation

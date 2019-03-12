@@ -52,7 +52,7 @@ npm install @material/notched-outline
 ### Styles
 
 ```scss
-@import "@material/notched-outline/mdc-notched-outline";
+@import "@mongol/notched-outline/mdc-notched-outline";
 ```
 
 ### JavaScript Instantiation

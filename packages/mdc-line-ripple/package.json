@@ -1,5 +1,5 @@
 {
-  "name": "@material/line-ripple",
+  "name": "@mongol/line-ripple",
   "description": "The Material Components for the web line-ripple component",
   "version": "1.0.0",
   "license": "MIT",
@@ -21,9 +21,9 @@
     "access": "public"
   },
   "dependencies": {
-    "@material/animation": "^1.0.0",
-    "@material/base": "^1.0.0",
-    "@material/theme": "^1.0.0",
+    "@mongol/animation": "^1.0.0",
+    "@mongol/base": "^1.0.0",
+    "@mongol/theme": "^1.0.0",
     "tslib": "^1.9.3"
   }
 }

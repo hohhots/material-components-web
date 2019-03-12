@@ -45,7 +45,7 @@ However, you can also use SVG, [Font Awesome](https://fontawesome.com/), or any 
 ### Styles
 
 ```scss
-@import "@material/select/icon/mdc-select-icon";
+@import "@mongol/select/icon/mdc-select-icon";
 ```
 
 ### JavaScript Instantiation

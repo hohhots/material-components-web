@@ -1,5 +1,5 @@
 {
-  "name": "@material/shape",
+  "name": "@mongol/shape",
   "description": "Shape utilities for Material Components for the web",
   "version": "1.0.0",
   "license": "MIT",
@@ -16,6 +16,6 @@
     "access": "public"
   },
   "dependencies": {
-    "@material/feature-targeting": "^0.44.1"
+    "@mongol/feature-targeting": "^0.44.1"
   }
 }
