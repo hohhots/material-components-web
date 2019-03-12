@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
+import {MDCComponent} from '@mongol/base/component';
 import {MDCGridListAdapter} from './adapter';
 import {MDCGridListFoundation} from './foundation';
 

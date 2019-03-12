@@ -21,7 +21,7 @@ npm install @material/dom
 ## Basic Usage
 
 ```js
-import * as ponyfill from '@material/dom/ponyfill';
+import * as ponyfill from '@mongol/dom/ponyfill';
 ```
 
 > See [Importing the JS component](../../docs/importing-js.md) for more information on how to import JavaScript.

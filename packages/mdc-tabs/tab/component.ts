@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {MDCRipple} from '@material/ripple/component';
+import {MDCComponent} from '@mongol/base/component';
+import {MDCRipple} from '@mongol/ripple/component';
 import {MDCTabAdapter} from './adapter';
 import {cssClasses} from './constants';
 import {MDCTabFoundation} from './foundation';

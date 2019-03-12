@@ -72,7 +72,7 @@ However, you can also use SVG, [Font Awesome](https://fontawesome.com/), or any 
 ### JavaScript Instantiation
 
 ```js
-import {MDCTopAppBar} from '@material/top-app-bar/index';
+import {MDCTopAppBar} from '@mongol/top-app-bar/index';
 
 // Instantiation
 const topAppBarElement = document.querySelector('.mdc-top-app-bar');

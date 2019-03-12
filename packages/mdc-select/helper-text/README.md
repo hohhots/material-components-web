@@ -42,7 +42,7 @@ Helper text gives context about a select, such as how the selection will be used
 ### JavaScript Instantiation
 
 ```js
-import {MDCSelectHelperText} from '@material/select/helper-text';
+import {MDCSelectHelperText} from '@mongol/select/helper-text';
 
 const helperText = new MDCSelectHelperText(document.querySelector('.mdc-select-helper-text'));
 ```

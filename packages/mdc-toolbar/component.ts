@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {MDCRipple} from '@material/ripple/component';
+import {MDCComponent} from '@mongol/base/component';
+import {MDCRipple} from '@mongol/ripple/component';
 import {MDCToolbarAdapter} from './adapter';
 import {MDCToolbarFoundation} from './foundation';
 import {MDCToolbarEventDetail} from './types';

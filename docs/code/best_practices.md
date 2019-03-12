@@ -73,9 +73,9 @@ This is because wrapping libraries only use `foundation` and `adapter`, so we sh
 
 ```ts
 // BAD
-import {MDCFoundation} from '@material/base';
+import {MDCFoundation} from '@mongol/base';
 // GOOD
-import {MDCFoundation} from '@material/base/foundation';
+import {MDCFoundation} from '@mongol/base/foundation';
 ```
 
 #### All adapters must be defined as interfaces
@@ -108,7 +108,7 @@ The `defaultAdapter` must return an object with the correct adapter shape.
 
 ```ts
 // foundation.ts
-import {MDCFoundation} from '@material/base/foundation';
+import {MDCFoundation} from '@mongol/base/foundation';
 import MDCComponentAdapter from './adapter';
 export class MDCComponentFoundation extends MDCFoundation<MDCComponentAdapter> {
   static get defaultAdapter(): MDCComponentAdapter {
@@ -126,7 +126,7 @@ Components must extend `MDCComponent` parameterized by their respective foundati
 
 ```ts
 // index.ts
-import {MDCComponent} from '@material/base/component';
+import {MDCComponent} from '@mongol/base/component';
 import MDCComponentFoundation from './foundation';
 export class MDCAwesomeComponent extends MDCComponent<MDCComponentFoundation> {
   getDefaultFoundation(): MDCComponentFoundation {

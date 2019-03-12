@@ -13,7 +13,7 @@ Most components ship with Component / Foundation classes which are used to provi
 ### ES Modules
 
 ```js
-import {MDCFoo, MDCFooFoundation} from '@material/foo';
+import {MDCFoo, MDCFooFoundation} from '@mongol/foo';
 ```
 
 Note that MDC Web's packages point `main` to pre-compiled UMD modules under `dist` to maximize compatibility.
@@ -23,7 +23,7 @@ However, if you want to take advantage of tree-shaking and dependency sharing wi
 of your built assets, you will want to explicitly reference the package's `index.js`:
 
 ```js
-import {MDCFoo, MDCFooFoundation} from '@material/foo/index';
+import {MDCFoo, MDCFooFoundation} from '@mongol/foo/index';
 ```
 
 Certain build tools will detect the [`module`](https://github.com/rollup/rollup/wiki/pkg.module) property in `package.json`,

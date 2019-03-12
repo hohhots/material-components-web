@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCFoundation} from '@material/base/foundation';
-import {SpecificEventListener} from '@material/base/types';
+import {MDCFoundation} from '@mongol/base/foundation';
+import {SpecificEventListener} from '@mongol/base/types';
 import {MDCToolbarAdapter} from './adapter';
 import {cssClasses, numbers, strings} from './constants';
 

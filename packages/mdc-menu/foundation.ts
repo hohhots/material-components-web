@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-import {MDCFoundation} from '@material/base/foundation';
-import {MDCListFoundation} from '@material/list/foundation';
-import {MDCMenuSurfaceFoundation} from '@material/menu-surface/foundation';
+import {MDCFoundation} from '@mongol/base/foundation';
+import {MDCListFoundation} from '@mongol/list/foundation';
+import {MDCMenuSurfaceFoundation} from '@mongol/menu-surface/foundation';
 import {MDCMenuAdapter} from './adapter';
 import {cssClasses, strings} from './constants';
 

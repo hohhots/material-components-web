@@ -340,7 +340,7 @@ npm install --save-dev @material/ripple
 We need to tell our `app.js` to import the ES2015 file for `@material/ripple`. We also need to initialize an `MDCRipple` with a DOM element. Replace your “hello world” version of `app.js` with this code:
 
 ```js
-import {MDCRipple} from '@material/ripple/index';
+import {MDCRipple} from '@mongol/ripple/index';
 const ripple = new MDCRipple(document.querySelector('.foo-button'));
 ```
 

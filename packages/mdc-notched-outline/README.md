@@ -58,7 +58,7 @@ npm install @material/notched-outline
 ### JavaScript Instantiation
 
 ```js
-import {MDCNotchedOutline} from '@material/notched-outline';
+import {MDCNotchedOutline} from '@mongol/notched-outline';
 
 const notchedOutline = new MDCNotchedOutline(document.querySelector('.mdc-notched-outline'));
 ```

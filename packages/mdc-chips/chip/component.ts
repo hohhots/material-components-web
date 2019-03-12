@@ -21,15 +21,15 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {SpecificEventListener} from '@material/base/types';
+import {MDCComponent} from '@mongol/base/component';
+import {SpecificEventListener} from '@mongol/base/types';
 import {
   MDCRipple,
   MDCRippleAdapter,
   MDCRippleCapableSurface,
   MDCRippleFactory,
   MDCRippleFoundation,
-} from '@material/ripple/index';
+} from '@mongol/ripple/index';
 import {MDCChipAdapter} from './adapter';
 import {strings} from './constants';
 import {MDCChipFoundation} from './foundation';

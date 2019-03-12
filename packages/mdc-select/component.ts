@@ -21,15 +21,15 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {CustomEventListener, SpecificEventListener} from '@material/base/types';
-import {MDCFloatingLabel, MDCFloatingLabelFactory} from '@material/floating-label/index';
-import {MDCLineRipple, MDCLineRippleFactory} from '@material/line-ripple/index';
-import * as menuSurfaceConstants from '@material/menu-surface/constants';
-import * as menuConstants from '@material/menu/constants';
-import {MDCMenu, MDCMenuFactory, MDCMenuItemEvent} from '@material/menu/index';
-import {MDCNotchedOutline, MDCNotchedOutlineFactory} from '@material/notched-outline/index';
-import {MDCRipple, MDCRippleAdapter, MDCRippleCapableSurface, MDCRippleFoundation} from '@material/ripple/index';
+import {MDCComponent} from '@mongol/base/component';
+import {CustomEventListener, SpecificEventListener} from '@mongol/base/types';
+import {MDCFloatingLabel, MDCFloatingLabelFactory} from '@mongol/floating-label/index';
+import {MDCLineRipple, MDCLineRippleFactory} from '@mongol/line-ripple/index';
+import * as menuSurfaceConstants from '@mongol/menu-surface/constants';
+import * as menuConstants from '@mongol/menu/constants';
+import {MDCMenu, MDCMenuFactory, MDCMenuItemEvent} from '@mongol/menu/index';
+import {MDCNotchedOutline, MDCNotchedOutlineFactory} from '@mongol/notched-outline/index';
+import {MDCRipple, MDCRippleAdapter, MDCRippleCapableSurface, MDCRippleFoundation} from '@mongol/ripple/index';
 import {MDCSelectAdapter} from './adapter';
 import {cssClasses, strings} from './constants';
 import {MDCSelectFoundation} from './foundation';

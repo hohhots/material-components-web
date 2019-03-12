@@ -89,7 +89,7 @@ npm install @material/slider
 Then in JS
 
 ```js
-import {MDCSlider} from '@material/slider';
+import {MDCSlider} from '@mongol/slider';
 
 const slider = new MDCSlider(document.querySelector('.mdc-slider'));
 slider.listen('MDCSlider:change', () => console.log(`Value changed to ${slider.value}`));
@@ -99,7 +99,7 @@ You can also include MDCSlider via its UMD version located at `dist/mdc.slider[.
 
 ```js
 // CommonJS
-const {MDCSlider} = require('@material/slider/dist/mdc.slider');
+const {MDCSlider} = require('@mongol/slider/dist/mdc.slider');
 
 // AMD
 require(['/path/to/@material/slider/dist/mdc.slider'], ({MDCSlider}) => {

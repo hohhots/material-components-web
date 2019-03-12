@@ -56,7 +56,7 @@ npm install @material/menu-surface
 ### JavaScript Instantiation
 
 ```js
-import {MDCMenuSurface} from '@material/menu-surface';
+import {MDCMenuSurface} from '@mongol/menu-surface';
 
 const menuSurface = new MDCMenuSurface(document.querySelector('.mdc-menu-surface'));
 ```

@@ -57,7 +57,7 @@ npm install @material/chips
 ### JavaScript Instantiation
 
 ```js
-import {MDCChipSet} from '@material/chips';
+import {MDCChipSet} from '@mongol/chips';
 const chipSetEl = document.querySelector('.mdc-chip-set');
 const chipSet = new MDCChipSet(chipSetEl);
 ```

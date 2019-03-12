@@ -21,10 +21,10 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {CustomEventListener, SpecificEventListener} from '@material/base/types';
-import {MDCTabScroller, MDCTabScrollerFactory} from '@material/tab-scroller/index';
-import {MDCTab, MDCTabFactory, MDCTabFoundation, MDCTabInteractionEvent} from '@material/tab/index';
+import {MDCComponent} from '@mongol/base/component';
+import {CustomEventListener, SpecificEventListener} from '@mongol/base/types';
+import {MDCTabScroller, MDCTabScrollerFactory} from '@mongol/tab-scroller/index';
+import {MDCTab, MDCTabFactory, MDCTabFoundation, MDCTabInteractionEvent} from '@mongol/tab/index';
 import {MDCTabBarAdapter} from './adapter';
 import {MDCTabBarFoundation} from './foundation';
 import {MDCTabBarActivatedEventDetail} from './types';

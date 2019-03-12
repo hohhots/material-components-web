@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-import {getCorrectPropertyName} from '@material/animation/util';
-import {MDCFoundation} from '@material/base/foundation';
-import {SpecificEventListener} from '@material/base/types';
+import {getCorrectPropertyName} from '@mongol/animation/util';
+import {MDCFoundation} from '@mongol/base/foundation';
+import {SpecificEventListener} from '@mongol/base/types';
 import {MDCTabBarAdapter} from './adapter';
 import {cssClasses, strings} from './constants';
 

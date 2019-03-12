@@ -48,7 +48,7 @@ However, you can also use SVG, [Font Awesome](https://fontawesome.com/), or any 
 ### JavaScript Instantiation
 
 ```js
-import {MDCTextFieldIcon} from '@material/textfield/icon';
+import {MDCTextFieldIcon} from '@mongol/textfield/icon';
 
 const icon = new MDCTextFieldIcon(document.querySelector('.mdc-text-field-icon'));
 ```

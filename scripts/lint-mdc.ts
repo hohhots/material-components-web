@@ -166,7 +166,7 @@ function checkOneImportPath(
   const resolvedFileNameWithoutExt = path.parse(resolvedAbsolutePathWithExt).name;
 
   const isLocalFileImport = resolvedAbsolutePathWithExt.indexOf('node_modules') === -1;
-  const isMaterialNpmImport = importPath.startsWith('@material/');
+  const isMaterialNpmImport = importPath.startsWith('@mongol/');
   const isThirdPartyImport = !isMaterialNpmImport && !isLocalFileImport;
 
   // Make sure npm modules are specified in package.json dependencies
@@ -236,7 +236,7 @@ function checkOneImportPath(
         [
           `Import path '${importPathAnsi}' appears to be a relative path to an MDC package.`,
           'Please use a @material import instead.',
-          "E.g.: import '@material/foo/types' instead of import '../mdc-foo/types'.",
+          "E.g.: import '@mongol/foo/types' instead of import '../mdc-foo/types'.",
         ],
     );
     return;
