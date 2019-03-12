@@ -139,7 +139,7 @@ function checkJSDependencyAddedInWebpackConfig() {
   const jsconfig = WEBPACK_CONFIG.find((value) => {
     return value.name === 'main-js-a-la-carte';
   });
-  const nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@material/', ''));
+  const nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@mongol/', ''));
   assert.notEqual(typeof jsconfig.entry[nameCamel], 'undefined',
     'FAILURE: Component ' + CLI_PACKAGE_JSON.name + ' javascript dependency is not added to webpack ' +
     'configuration. Please add ' + nameCamel + ' to ' + WEBPACK_CONFIG_RELATIVE_PATH + '\'s js-components ' +
@@ -152,7 +152,7 @@ function checkCSSDependencyAddedInWebpackConfig() {
     const cssconfig = WEBPACK_CONFIG.find((value) => {
       return value.name === 'main-css-a-la-carte';
     });
-    const nameMDC = CLI_PACKAGE_JSON.name.replace('@material/', 'mdc.');
+    const nameMDC = CLI_PACKAGE_JSON.name.replace('@mongol/', 'mdc.');
     assert.notEqual(typeof cssconfig.entry[nameMDC], 'undefined',
       'FAILURE: Component ' + CLI_PACKAGE_JSON.name + ' css dependency not added to webpack ' +
       'configuration. Please add ' + name + ' to ' + WEBPACK_CONFIG_RELATIVE_PATH + '\'s css ' +
@@ -202,7 +202,7 @@ function checkJSDependencyAddedInMDCPackage() {
   if (typeof (CLI_PACKAGE_JSON.main) !== 'undefined' &&
       NOT_IMPORTED.indexOf(name) === -1 &&
       NOT_MCW_DEP.indexOf(name) === -1) {
-    const nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@material/', ''));
+    const nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@mongol/', ''));
     const src = fs.readFileSync(path.join(process.env.PWD, MASTER_TS_RELATIVE_PATH), 'utf8');
     const ast = recast.parse(src, {
       parser: {
@@ -240,7 +240,7 @@ function checkComponentImportedAddedInMDCPackage(ast) {
 }
 
 function checkAutoInitAddedInMDCPackage(ast) {
-  let nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@material/', ''));
+  let nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@mongol/', ''));
   if (nameCamel === 'textfield') {
     nameCamel = 'textField';
   } else if (nameCamel === 'switch') {
@@ -265,7 +265,7 @@ function checkAutoInitAddedInMDCPackage(ast) {
 }
 
 function checkComponentExportedAddedInMDCPackage(ast) {
-  let nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@material/', ''));
+  let nameCamel = camelCase(CLI_PACKAGE_JSON.name.replace('@mongol/', ''));
   if (nameCamel === 'textfield') {
     nameCamel = 'textField';
   } else if (nameCamel === 'switch') {

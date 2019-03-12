@@ -365,13 +365,13 @@ Mixin | Description
 #### ES Module syntax
 
 ```javascript
-import {MDCToolbar, MDCToolbarFoundation} from '@material/toolbar';
+import {MDCToolbar, MDCToolbarFoundation} from '@mongol/toolbar';
 ```
 
 #### CommonJS
 
 ```javascript
-const mdcToolbar = require('@material/toolbar');
+const mdcToolbar = require('@mongol/toolbar');
 const MDCToolbar = mdcToolbar.MDCToolbar;
 const MDCToolbarFoundation = mdcToolbar.MDCToolbarFoundation;
 ```
@@ -404,7 +404,7 @@ mdc.toolbar.MDCToolbar.attachTo(document.querySelector('.mdc-toolbar'));
 ### Manual Instantiation
 
 ```javascript
-import {MDCToolbar} from '@material/toolbar';
+import {MDCToolbar} from '@mongol/toolbar';
 
 const toolbar = new MDCToolbar(document.querySelector('.mdc-toolbar'));
 ```

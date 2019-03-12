@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {ponyfill} from '@material/dom/index';
+import {MDCComponent} from '@mongol/base/component';
+import {ponyfill} from '@mongol/dom/index';
 import {MDCRippleAdapter} from './adapter';
 import {MDCRippleFoundation} from './foundation';
 import {MDCRippleAttachOpts, MDCRippleCapableSurface} from './types';

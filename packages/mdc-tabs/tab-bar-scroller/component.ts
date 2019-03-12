@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {getCorrectPropertyName} from '@material/animation/util';
-import {MDCComponent} from '@material/base/component';
+import {getCorrectPropertyName} from '@mongol/animation/util';
+import {MDCComponent} from '@mongol/base/component';
 import {MDCTabBar, MDCTabBarFactory} from '../tab-bar/index';
 import {MDCTabBarScrollerAdapter} from './adapter';
 import {MDCTabBarScrollerFoundation} from './foundation';

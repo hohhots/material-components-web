@@ -38,7 +38,7 @@ Helper text gives context about a field’s input, such as how the input will be
 ### JavaScript Instantiation
 
 ```js
-import {MDCTextFieldHelperText} from '@material/textfield/helper-text';
+import {MDCTextFieldHelperText} from '@mongol/textfield/helper-text';
 
 const helperText = new MDCTextFieldHelperText(document.querySelector('.mdc-text-field-helper-text'));
 ```

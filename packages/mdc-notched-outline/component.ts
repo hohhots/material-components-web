@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {MDCFloatingLabelFoundation} from '@material/floating-label/foundation';
+import {MDCComponent} from '@mongol/base/component';
+import {MDCFloatingLabelFoundation} from '@mongol/floating-label/foundation';
 import {MDCNotchedOutlineAdapter} from './adapter';
 import {cssClasses, strings} from './constants';
 import {MDCNotchedOutlineFoundation} from './foundation';

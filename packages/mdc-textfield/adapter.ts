@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-import {EventType, SpecificEventListener} from '@material/base/types';
+import {EventType, SpecificEventListener} from '@mongol/base/types';
 import {MDCTextFieldNativeInputElement} from './types';
 
 /**

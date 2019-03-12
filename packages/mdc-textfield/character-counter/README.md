@@ -39,7 +39,7 @@ Character counter is used if there is a character limit. It displays the ratio o
 ### JavaScript Instantiation
 
 ```js
-import {MDCTextFieldCharacterCounter} from '@material/textfield/character-counter';
+import {MDCTextFieldCharacterCounter} from '@mongol/textfield/character-counter';
 
 const characterCounter = new MDCTextFieldCharacterCounter(document.querySelector('.mdc-text-field-character-counter'));
 ```

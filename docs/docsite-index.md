@@ -102,7 +102,7 @@ However, it is highly recommended to install Material Components for the web via
     Next, import the ES Module file for `@material/ripple` into your application, and initialize an `MDCRipple` with a DOM element:
 
     ```js
-    import {MDCRipple} from '@material/ripple';
+    import {MDCRipple} from '@mongol/ripple';
     const ripple = new MDCRipple(document.querySelector('.foo-button'));
     ```
 

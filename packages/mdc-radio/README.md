@@ -65,8 +65,8 @@ We recommend using MDC Radio with [MDC Form Field](../mdc-form-field) for enhanc
 The radio button will work without JavaScript, but you can enhance it with a ripple interaction effect by instantiating `MDCRadio` on the `mdc-radio` element. To activate the ripple effect upon interacting with the label, you must also instantiate `MDCFormField` on the `mdc-form-field` element and set the `MDCRadio` instance as its `input`.
 
 ```js
-import {MDCFormField} from '@material/form-field';
-import {MDCRadio} from '@material/radio';
+import {MDCFormField} from '@mongol/form-field';
+import {MDCRadio} from '@mongol/radio';
 
 const radio = new MDCRadio(document.querySelector('.mdc-radio'));
 const formField = new MDCFormField(document.querySelector('.mdc-form-field'));

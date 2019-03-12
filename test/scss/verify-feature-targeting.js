@@ -20,7 +20,7 @@ function materialImporter(url) {
     // Support omission of .scss extension
     const normalizedUrl = url.endsWith('.scss') ? url : `${url}.scss`;
     // Convert @material/foo to packages/mdc-foo to load directly from packages folder in repository
-    const scssPath = normalizedUrl.replace('@material/', 'packages/mdc-');
+    const scssPath = normalizedUrl.replace('@mongol/', 'packages/mdc-');
     // Support omission of leading _ for partials
     const resolved = tryAccess(scssPath) ||
       tryAccess(path.join(path.dirname(scssPath), `_${path.basename(scssPath)}`));

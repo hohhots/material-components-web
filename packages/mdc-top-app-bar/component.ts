@@ -21,8 +21,8 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {MDCRipple, MDCRippleFactory} from '@material/ripple/component';
+import {MDCComponent} from '@mongol/base/component';
+import {MDCRipple, MDCRippleFactory} from '@mongol/ripple/component';
 import {MDCTopAppBarAdapter} from './adapter';
 import {cssClasses, strings} from './constants';
 import {MDCFixedTopAppBarFoundation} from './fixed/foundation';

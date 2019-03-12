@@ -51,7 +51,7 @@ However, you can also use SVG, [Font Awesome](https://fontawesome.com/), or any 
 ### JavaScript Instantiation
 
 ```js
-import {MDCSelectIcon} from '@material/select/icon';
+import {MDCSelectIcon} from '@mongol/select/icon';
 
 const icon = new MDCSelectIcon(document.querySelector('.mdc-select__icon'));
 ```

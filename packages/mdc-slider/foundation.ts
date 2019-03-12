@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-import {getCorrectEventName, getCorrectPropertyName} from '@material/animation/util';
-import {MDCFoundation} from '@material/base/foundation';
-import {EventType, SpecificEventListener} from '@material/base/types';
+import {getCorrectEventName, getCorrectPropertyName} from '@mongol/animation/util';
+import {MDCFoundation} from '@mongol/base/foundation';
+import {EventType, SpecificEventListener} from '@mongol/base/types';
 import {MDCSliderAdapter} from './adapter';
 import {cssClasses, numbers, strings} from './constants';
 

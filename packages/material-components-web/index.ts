@@ -21,36 +21,36 @@
  * THE SOFTWARE.
  */
 
-import autoInit from '@material/auto-init/index';
-import * as base from '@material/base/index';
-import * as checkbox from '@material/checkbox/index';
-import * as chips from '@material/chips/index';
-import * as dialog from '@material/dialog/index';
-import * as dom from '@material/dom/index';
-import * as drawer from '@material/drawer/index';
-import * as floatingLabel from '@material/floating-label/index';
-import * as formField from '@material/form-field/index';
-import * as gridList from '@material/grid-list/index';
-import * as iconButton from '@material/icon-button/index';
-import * as lineRipple from '@material/line-ripple/index';
-import * as linearProgress from '@material/linear-progress/index';
-import * as list from '@material/list/index';
-import * as menuSurface from '@material/menu-surface/index';
-import * as menu from '@material/menu/index';
-import * as notchedOutline from '@material/notched-outline/index';
-import * as radio from '@material/radio/index';
-import * as ripple from '@material/ripple/index';
-import * as select from '@material/select/index';
-import * as slider from '@material/slider/index';
-import * as snackbar from '@material/snackbar/index';
-import * as switchControl from '@material/switch/index';
-import * as tabBar from '@material/tab-bar/index';
-import * as tabIndicator from '@material/tab-indicator/index';
-import * as tabScroller from '@material/tab-scroller/index';
-import * as tab from '@material/tab/index';
-import * as textField from '@material/textfield/index';
-import * as toolbar from '@material/toolbar/index';
-import * as topAppBar from '@material/top-app-bar/index';
+import autoInit from '@mongol/auto-init/index';
+import * as base from '@mongol/base/index';
+import * as checkbox from '@mongol/checkbox/index';
+import * as chips from '@mongol/chips/index';
+import * as dialog from '@mongol/dialog/index';
+import * as dom from '@mongol/dom/index';
+import * as drawer from '@mongol/drawer/index';
+import * as floatingLabel from '@mongol/floating-label/index';
+import * as formField from '@mongol/form-field/index';
+import * as gridList from '@mongol/grid-list/index';
+import * as iconButton from '@mongol/icon-button/index';
+import * as lineRipple from '@mongol/line-ripple/index';
+import * as linearProgress from '@mongol/linear-progress/index';
+import * as list from '@mongol/list/index';
+import * as menuSurface from '@mongol/menu-surface/index';
+import * as menu from '@mongol/menu/index';
+import * as notchedOutline from '@mongol/notched-outline/index';
+import * as radio from '@mongol/radio/index';
+import * as ripple from '@mongol/ripple/index';
+import * as select from '@mongol/select/index';
+import * as slider from '@mongol/slider/index';
+import * as snackbar from '@mongol/snackbar/index';
+import * as switchControl from '@mongol/switch/index';
+import * as tabBar from '@mongol/tab-bar/index';
+import * as tabIndicator from '@mongol/tab-indicator/index';
+import * as tabScroller from '@mongol/tab-scroller/index';
+import * as tab from '@mongol/tab/index';
+import * as textField from '@mongol/textfield/index';
+import * as toolbar from '@mongol/toolbar/index';
+import * as topAppBar from '@mongol/top-app-bar/index';
 
 // Register all components
 autoInit.register('MDCCheckbox', checkbox.MDCCheckbox);

@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@material/base/component';
-import {SpecificEventListener} from '@material/base/types';
-import {ponyfill} from '@material/dom/index';
+import {MDCComponent} from '@mongol/base/component';
+import {SpecificEventListener} from '@mongol/base/types';
+import {ponyfill} from '@mongol/dom/index';
 import {MDCTabScrollerAdapter} from './adapter';
 import {MDCTabScrollerFoundation} from './foundation';
 import * as util from './util';
