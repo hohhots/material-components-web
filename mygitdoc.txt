@@ -21,6 +21,9 @@ step 6: Push to orign
 
    ----------------------
 
+--- Push all branch and tags into origin
+	git push --all origin
+
 --- Discarding the local commit this branch
 	git reset --hard HEAD^
 
