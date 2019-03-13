@@ -1,0 +1,49 @@
+my git progress
+
+step 1: switch to working branch
+	git checkout work
+
+step 2: Sync work branch and master branch with upstream 
+	git pull upstream master
+	git rebase work master     // master rebase on work
+
+step 3: Do work and commit.
+	git commit -m “××××”
+
+step 4: switch bach to master branch
+	git checkout master
+
+step 5: git rebase work
+
+step 6: Push to orign
+	git push origin master
+
+
+   ----------------------
+
+--- Discarding the local commit this branch
+	git reset --hard HEAD^
+
+--- Discarding all local commits on this branch
+	git reset --hard @{u}
+
+--- View all remote
+	git remote -v
+
+--- Add remote repos
+	git remote add origin <URL>
+
+--- Change remote URL
+	git remote set-url origin <url>
+
+--- See the number of lines changed in each file
+	git diff --stat
+
+--- Rebase to combine all four commits into a single, concise commit.
+	git rebase -i HEAD~4
+
+--- Change last commit message.
+	git commit --amend
+
+--- Rebase working branch on master
+	git rebase master
