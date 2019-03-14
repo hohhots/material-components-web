@@ -22,14 +22,27 @@
 -->
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>Ripple - Material Components Catalog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
-    <link rel="stylesheet" href="/assets/ripple.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/logo_components_color_2x_web_48dp.png"
+    />
+    <link rel="stylesheet" href="/assets/ripple.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
     <script src="/ready.js"></script>
     <style>
       .demo-surface {
@@ -79,7 +92,7 @@
       }
 
       .unsupported main {
-        opacity: .2;
+        opacity: 0.2;
         pointer-events: none;
         user-select: none;
         -webkit-user-select: none;
@@ -113,13 +126,15 @@
   </head>
   <body class="mdc-typography">
     <aside id="unsupported-msg">
-      It appears your browser does not support custom properties, or has a broken implementation.
-      Please try this in Chrome, Firefox, or Safari 10+.
+      It appears your browser does not support custom properties, or has a
+      broken implementation. Please try this in Chrome, Firefox, or Safari 10+.
     </aside>
     <header class="mdc-toolbar mdc-toolbar--fixed">
       <div class="mdc-toolbar__row">
         <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <a href="/" class="catalog-back mdc-toolbar__menu-icon"><i class="material-icons">&#xE5C4;</i></a>
+          <a href="/" class="catalog-back mdc-toolbar__menu-icon"
+            ><i class="material-icons">&#xE5C4;</i></a
+          >
           <span class="mdc-toolbar__title catalog-title">Ripple</span>
         </section>
       </div>
@@ -132,13 +147,20 @@
       <section class="example">
         <div>
           <h2>Bounded</h2>
-          <div class="mdc-ripple-surface demo-surface mdc-elevation--z2" tabindex="0">
+          <div
+            class="mdc-ripple-surface demo-surface mdc-elevation--z2"
+            tabindex="0"
+          >
             Interact with me!
           </div>
         </div>
         <div>
           <h2>Bounded - CSS Only</h2>
-          <div class="mdc-ripple-surface demo-surface mdc-elevation--z2" data-demo-no-js tabindex="0">
+          <div
+            class="mdc-ripple-surface demo-surface mdc-elevation--z2"
+            data-demo-no-js
+            tabindex="0"
+          >
             Interact with me!
           </div>
         </div>
@@ -146,15 +168,35 @@
       <section class="example">
         <div>
           <h2>Unbounded</h2>
-          <div class="mdc-ripple-surface demo-surface material-icons" data-mdc-ripple-is-unbounded
-               aria-label="Favorite" tabindex="0">
+          <div
+            class="mdc-ripple-surface demo-surface material-icons"
+            data-mdc-ripple-is-unbounded
+            aria-label="Favorite"
+            tabindex="0"
+          >
+            favorite
+          </div>
+        </div>
+        <div>
+          <h2>Unbounded text</h2>
+          <div
+            class="mdc-ripple-surface demo-surface"
+            data-mdc-ripple-is-unbounded
+            aria-label="Favorite"
+            tabindex="0"
+          >
             favorite
           </div>
         </div>
         <div>
           <h2>Unbounded - CSS Only</h2>
-          <div class="mdc-ripple-surface demo-surface material-icons" data-mdc-ripple-is-unbounded
-               aria-label="Favorite" data-demo-no-js tabindex="0">
+          <div
+            class="mdc-ripple-surface demo-surface material-icons"
+            data-mdc-ripple-is-unbounded
+            aria-label="Favorite"
+            data-demo-no-js
+            tabindex="0"
+          >
             favorite
           </div>
         </div>
@@ -164,12 +206,16 @@
           <h2>Theme Styles</h2>
           <div
             class="mdc-ripple-surface mdc-ripple-surface--primary
-                   mdc-theme--primary demo-surface mdc-elevation--z2" tabindex="0">
+                   mdc-theme--primary demo-surface mdc-elevation--z2"
+            tabindex="0"
+          >
             Primary
           </div>
           <div
             class="mdc-ripple-surface mdc-ripple-surface--accent
-                   mdc-theme--secondary demo-surface mdc-elevation--z2" tabindex="0">
+                   mdc-theme--secondary demo-surface mdc-elevation--z2"
+            tabindex="0"
+          >
             Secondary
           </div>
         </div>
@@ -177,12 +223,18 @@
           <h2>Theme Styles - CSS Only</h2>
           <div
             class="mdc-ripple-surface mdc-ripple-surface--primary
-                   mdc-theme--primary demo-surface mdc-elevation--z2" data-demo-no-js tabindex="0">
+                   mdc-theme--primary demo-surface mdc-elevation--z2"
+            data-demo-no-js
+            tabindex="0"
+          >
             Primary
           </div>
           <div
             class="mdc-ripple-surface mdc-ripple-surface--accent
-                   mdc-theme--secondary demo-surface mdc-elevation--z2" data-demo-no-js tabindex="0">
+                   mdc-theme--secondary demo-surface mdc-elevation--z2"
+            data-demo-no-js
+            tabindex="0"
+          >
             Secondary
           </div>
         </div>
@@ -190,11 +242,22 @@
       <section class="example">
         <div>
           <h2>Applied to <code>&lt;button&gt;</code> element</h2>
-          <button type="button" class="mdc-ripple-surface mdc-elevation--z2 demo-surface">button</button>
+          <button
+            type="button"
+            class="mdc-ripple-surface mdc-elevation--z2 demo-surface"
+          >
+            button
+          </button>
         </div>
         <div>
           <h2>Applied to <code>&lt;button&gt;</code> element - CSS Only</h2>
-          <button type="button" class="mdc-ripple-surface mdc-elevation--z2 demo-surface" data-demo-no-js>button</button>
+          <button
+            type="button"
+            class="mdc-ripple-surface mdc-elevation--z2 demo-surface"
+            data-demo-no-js
+          >
+            button
+          </button>
         </div>
       </section>
     </main>
@@ -206,9 +269,14 @@
           document.documentElement.classList.add('unsupported');
         }
 
-        [].forEach.call(document.querySelectorAll('.mdc-ripple-surface:not([data-demo-no-js])'), function(surface) {
-          mdc.ripple.MDCRipple.attachTo(surface);
-        });
+        [].forEach.call(
+          document.querySelectorAll(
+            '.mdc-ripple-surface:not([data-demo-no-js])',
+          ),
+          function(surface) {
+            mdc.ripple.MDCRipple.attachTo(surface);
+          },
+        );
       });
     </script>
   </body>

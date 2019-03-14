@@ -37,11 +37,14 @@ Material Components for the web is the successor to [Material Design Lite](https
 
 ```html
 <!-- Required styles for MDC Web -->
-<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+/>
 
 <!-- Render textfield component -->
 <div class="mdc-text-field">
-  <input type="text" id="my-text-field" class="mdc-text-field__input">
+  <input type="text" id="my-text-field" class="mdc-text-field__input" />
   <label class="mdc-floating-label" for="my-text-field">Label</label>
   <div class="mdc-line-ripple"></div>
 </div>
@@ -50,7 +53,9 @@ Material Components for the web is the successor to [Material Design Lite](https
 <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
 <!-- Instantiate single textfield component rendered in the document -->
 <script>
-  mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));
+  mdc.textField.MDCTextField.attachTo(
+    document.querySelector('.mdc-text-field'),
+  );
 </script>
 ```
 
@@ -72,7 +77,7 @@ Sample usage of text field component. Please see [MDC Textfield](packages/mdc-te
 
 ```html
 <div class="mdc-text-field">
-  <input type="text" id="my-text-field" class="mdc-text-field__input">
+  <input type="text" id="my-text-field" class="mdc-text-field__input" />
   <label class="mdc-floating-label" for="my-text-field">Label</label>
   <div class="mdc-line-ripple"></div>
 </div>
@@ -83,7 +88,7 @@ Sample usage of text field component. Please see [MDC Textfield](packages/mdc-te
 Load styles required for text field component.
 
 ```scss
-@import "@mongol/textfield/mdc-text-field";
+@import '@mongol/textfield/mdc-text-field';
 ```
 
 #### JavaScript
@@ -91,7 +96,7 @@ Load styles required for text field component.
 Import `MDCTextField` module to instantiate text field component.
 
 ```js
-import {MDCTextField} from '@mongol/textfield/index';
+import { MDCTextField } from '@mongol/textfield/index';
 const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 ```
 
@@ -112,3 +117,11 @@ Third-party services that we use and are thankful to:
 - [CrossBrowserTesting](https://crossbrowsertesting.com/) for [screenshot testing](test/screenshot/).
 
 <a href="https://crossbrowsertesting.com/"><img src="test/screenshot/static/images/cbt-logo.png" alt="CrossBrowserTesting logo" width="180" /></a>
+
+##brgd
+
+- npm install
+- npm run dist
+- ./scripts/bootstrap-unreleased.sh
+
+- npm run dev

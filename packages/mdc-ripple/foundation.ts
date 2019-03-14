@@ -599,8 +599,8 @@ export class MDCRippleFoundation extends MDCFoundation<MDCRippleAdapter> {
 
     if (this.adapter_.isUnbounded()) {
       this.unboundedCoords_ = {
-        left: Math.round(this.frame_.width / 2 - this.initialSize_ / 2),
-        top: Math.round(this.frame_.height / 2 - this.initialSize_ / 2),
+        top: Math.round(this.frame_.width / 2 - this.initialSize_ / 2),
+        left: Math.round(this.frame_.height / 2 - this.initialSize_ / 2),
       };
 
       this.adapter_.updateCssVariable(
