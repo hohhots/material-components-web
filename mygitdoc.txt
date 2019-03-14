@@ -1,21 +1,23 @@
 my git progress
 
-step 1: switch to working branch
-	git checkout work
-
-step 2: Sync work branch and master branch with upstream 
-	git pull upstream master
-	git rebase work master     // master rebase on work
-
-step 3: Do work and commit.
-	git commit -m “××××”
-
-step 4: switch bach to master branch
+step 1: Sync work branch and master branch with upstream
+	in master branch
+	git fetch upstream
 	git checkout master
+	git merge upstream/master
 
-step 5: git rebase work
+step 2: Do work and commit.
+	git co work
+	does some work..........
+	git add .
+	git commit -m “××××”
+	git rebase master
 
-step 6: Push to orign
+step 3: merge work branch in master branch
+	git checkout master
+	git merge work
+
+step 4: Push to orign
 	git push origin master
 
 
@@ -53,3 +55,6 @@ step 6: Push to orign
 
 --- Rebase master branch on work branch when in work branch
 	git rebase work master
+
+--- Take the client branch, figure out the patches since it diverged from the server branch, and replay these patches in the client branch as if it was based directly off the master branch instead.
+	git rebase --onto master server client
