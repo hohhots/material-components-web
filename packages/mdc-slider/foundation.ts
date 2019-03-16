@@ -21,20 +21,21 @@
  * THE SOFTWARE.
  */
 
-import {getCorrectEventName, getCorrectPropertyName} from '@mongol/animation/util';
-import {MDCFoundation} from '@mongol/base/foundation';
-import {EventType, SpecificEventListener} from '@mongol/base/types';
-import {MDCSliderAdapter} from './adapter';
-import {cssClasses, numbers, strings} from './constants';
+import {
+  getCorrectEventName,
+  getCorrectPropertyName,
+} from '@mongol/animation/util';
+import { MDCFoundation } from '@mongol/base/foundation';
+import { EventType, SpecificEventListener } from '@mongol/base/types';
+import { MDCSliderAdapter } from './adapter';
+import { cssClasses, numbers, strings } from './constants';
 
 type UpEventType = 'mouseup' | 'pointerup' | 'touchend';
 type DownEventType = 'mousedown' | 'pointerdown' | 'touchstart';
 type MoveEventType = 'mousemove' | 'pointermove' | 'touchmove';
 type MouseLikeEvent = MouseEvent | PointerEvent | TouchEvent;
 
-type MoveEventMap = {
-  readonly [K in DownEventType]: MoveEventType;
-};
+type MoveEventMap = { readonly [K in DownEventType]: MoveEventType };
 
 const DOWN_EVENTS: DownEventType[] = ['mousedown', 'pointerdown', 'touchstart'];
 const UP_EVENTS: UpEventType[] = ['mouseup', 'pointerup', 'touchend'];
@@ -78,7 +79,14 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
       getAttribute: () => null,
       setAttribute: () => undefined,
       removeAttribute: () => undefined,
-      computeBoundingRect: () => ({top: 0, right: 0, bottom: 0, left: 0, width: 0, height: 0}),
+      computeBoundingRect: () => ({
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0,
+        width: 0,
+        height: 0,
+      }),
       getTabIndex: () => 0,
       registerInteractionHandler: () => undefined,
       deregisterInteractionHandler: () => undefined,
@@ -121,18 +129,24 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
   private disabled_ = false;
   private preventFocusState_ = false;
 
-  private readonly thumbContainerPointerHandler_: SpecificEventListener<DownEventType>;
-  private readonly interactionStartHandler_: SpecificEventListener<DownEventType>;
+  private readonly thumbContainerPointerHandler_: SpecificEventListener<
+    DownEventType
+  >;
+  private readonly interactionStartHandler_: SpecificEventListener<
+    DownEventType
+  >;
   private readonly keydownHandler_: SpecificEventListener<'keydown'>;
   private readonly focusHandler_: SpecificEventListener<'focus'>;
   private readonly blurHandler_: SpecificEventListener<'blur'>;
   private readonly resizeHandler_: SpecificEventListener<'resize'>;
 
   constructor(adapter?: Partial<MDCSliderAdapter>) {
-    super({...MDCSliderFoundation.defaultAdapter, ...adapter});
+    super({ ...MDCSliderFoundation.defaultAdapter, ...adapter });
 
-    this.thumbContainerPointerHandler_ = () => this.handlingThumbTargetEvt_ = true;
-    this.interactionStartHandler_ = (evt: MouseLikeEvent) => this.handleDown_(evt);
+    this.thumbContainerPointerHandler_ = () =>
+      (this.handlingThumbTargetEvt_ = true);
+    this.interactionStartHandler_ = (evt: MouseLikeEvent) =>
+      this.handleDown_(evt);
     this.keydownHandler_ = (evt) => this.handleKeydown_(evt);
     this.focusHandler_ = () => this.handleFocus_();
     this.blurHandler_ = () => this.handleBlur_();
@@ -144,8 +158,14 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
     this.hasTrackMarker_ = this.adapter_.hasClass(cssClasses.HAS_TRACK_MARKER);
 
     DOWN_EVENTS.forEach((evtName) => {
-      this.adapter_.registerInteractionHandler(evtName, this.interactionStartHandler_);
-      this.adapter_.registerThumbContainerInteractionHandler(evtName, this.thumbContainerPointerHandler_);
+      this.adapter_.registerInteractionHandler(
+        evtName,
+        this.interactionStartHandler_,
+      );
+      this.adapter_.registerThumbContainerInteractionHandler(
+        evtName,
+        this.thumbContainerPointerHandler_,
+      );
     });
 
     this.adapter_.registerInteractionHandler('keydown', this.keydownHandler_);
@@ -163,8 +183,14 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
 
   destroy() {
     DOWN_EVENTS.forEach((evtName) => {
-      this.adapter_.deregisterInteractionHandler(evtName, this.interactionStartHandler_);
-      this.adapter_.deregisterThumbContainerInteractionHandler(evtName, this.thumbContainerPointerHandler_);
+      this.adapter_.deregisterInteractionHandler(
+        evtName,
+        this.interactionStartHandler_,
+      );
+      this.adapter_.deregisterThumbContainerInteractionHandler(
+        evtName,
+        this.thumbContainerPointerHandler_,
+      );
     });
 
     this.adapter_.deregisterInteractionHandler('keydown', this.keydownHandler_);
@@ -193,13 +219,17 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
 
       if (indivisible) {
         const lastStepRatio = (max - numMarkers * step) / step + 1;
-        this.adapter_.setLastTrackMarkersStyleProperty('flex-grow', String(lastStepRatio));
+        this.adapter_.setLastTrackMarkersStyleProperty(
+          'flex-grow',
+          String(lastStepRatio),
+        );
       }
     }
   }
 
   layout() {
     this.rect_ = this.adapter_.computeBoundingRect();
+    console.log(this.rect_);
     this.updateUIForCurrentValue_();
   }
 
@@ -217,7 +247,9 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
 
   setMax(max: number) {
     if (max < this.min_) {
-      throw new Error('Cannot set max to be less than the slider\'s minimum value');
+      throw new Error(
+        "Cannot set max to be less than the slider's minimum value",
+      );
     }
     this.max_ = max;
     this.setValue_(this.value_, false, true);
@@ -231,7 +263,9 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
 
   setMin(min: number) {
     if (min > this.max_) {
-      throw new Error('Cannot set min to be greater than the slider\'s maximum value');
+      throw new Error(
+        "Cannot set min to be greater than the slider's maximum value",
+      );
     }
     this.min_ = min;
     this.setValue_(this.value_, false, true);
@@ -247,7 +281,7 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
     if (step < 0) {
       throw new Error('Step cannot be set to a negative number');
     }
-    if (this.isDiscrete_ && (typeof (step) !== 'number' || step < 1)) {
+    if (this.isDiscrete_ && (typeof step !== 'number' || step < 1)) {
       step = 1;
     }
     this.step_ = step;
@@ -298,12 +332,19 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
     // (See https://github.com/material-components/material-components-web/issues/1192)
     const upHandler = () => {
       this.handleUp_();
-      this.adapter_.deregisterBodyInteractionHandler(moveEventType, moveHandler);
-      UP_EVENTS.forEach((evtName) => this.adapter_.deregisterBodyInteractionHandler(evtName, upHandler));
+      this.adapter_.deregisterBodyInteractionHandler(
+        moveEventType,
+        moveHandler,
+      );
+      UP_EVENTS.forEach((evtName) =>
+        this.adapter_.deregisterBodyInteractionHandler(evtName, upHandler),
+      );
     };
 
     this.adapter_.registerBodyInteractionHandler(moveEventType, moveHandler);
-    UP_EVENTS.forEach((evtName) => this.adapter_.registerBodyInteractionHandler(evtName, upHandler));
+    UP_EVENTS.forEach((evtName) =>
+      this.adapter_.registerBodyInteractionHandler(evtName, upHandler),
+    );
     this.setValueFromEvt_(downEvent);
   }
 
@@ -326,29 +367,32 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
   /**
    * Returns the pageX of the event
    */
-  private getPageX_(evt: MouseLikeEvent): number {
-    if ((evt as TouchEvent).targetTouches && (evt as TouchEvent).targetTouches.length > 0) {
-      return (evt as TouchEvent).targetTouches[0].pageX;
+  private getPageY_(evt: MouseLikeEvent): number {
+    if (
+      (evt as TouchEvent).targetTouches &&
+      (evt as TouchEvent).targetTouches.length > 0
+    ) {
+      return (evt as TouchEvent).targetTouches[0].pageY;
     }
-    return (evt as MouseEvent).pageX;
+    return (evt as MouseEvent).pageY;
   }
 
   /**
    * Sets the slider value from an event
    */
   private setValueFromEvt_(evt: MouseLikeEvent) {
-    const pageX = this.getPageX_(evt);
-    const value = this.computeValueFromPageX_(pageX);
+    const pageY = this.getPageY_(evt);
+    const value = this.computeValueFromPageY_(pageY);
     this.setValue_(value, true);
   }
 
   /**
-   * Computes the new value from the pageX position
+   * Computes the new value from the pageY position
    */
-  private computeValueFromPageX_(pageX: number): number {
-    const {max_: max, min_: min} = this;
-    const xPos = pageX - this.rect_.left;
-    let pctComplete = xPos / this.rect_.width;
+  private computeValueFromPageY_(pageY: number): number {
+    const { max_: max, min_: min } = this;
+    const yPos = pageY - this.rect_.top;
+    let pctComplete = yPos / this.rect_.height;
     if (this.adapter_.isRTL()) {
       pctComplete = 1 - pctComplete;
     }
@@ -409,11 +453,11 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
    * Computes the value given a keyboard key ID
    */
   private getValueForKeyId_(keyId: string): number {
-    const {max_: max, min_: min, step_: step} = this;
+    const { max_: max, min_: min, step_: step } = this;
     let delta = step || (max - min) / 100;
-    const valueNeedsToBeFlipped = this.adapter_.isRTL() && (
-        keyId === KEY_IDS.ARROW_LEFT || keyId === KEY_IDS.ARROW_RIGHT
-    );
+    const valueNeedsToBeFlipped =
+      this.adapter_.isRTL() &&
+      (keyId === KEY_IDS.ARROW_LEFT || keyId === KEY_IDS.ARROW_RIGHT);
     if (valueNeedsToBeFlipped) {
       delta = -delta;
     }
@@ -458,7 +502,7 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
       return;
     }
 
-    const {min_: min, max_: max} = this;
+    const { min_: min, max_: max } = this;
     const valueSetToBoundary = value === min || value === max;
     if (this.step_ && !valueSetToBoundary) {
       value = this.quantize_(value);
@@ -489,22 +533,31 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
   }
 
   private updateUIForCurrentValue_() {
-    const {max_: max, min_: min, value_: value} = this;
+    const { max_: max, min_: min, value_: value } = this;
     const pctComplete = (value - min) / (max - min);
-    let translatePx = pctComplete * this.rect_.width;
+    let translatePy = pctComplete * this.rect_.height;
     if (this.adapter_.isRTL()) {
-      translatePx = this.rect_.width - translatePx;
+      translatePy = this.rect_.height - translatePy;
     }
 
     const transformProp = getCorrectPropertyName(window, 'transform');
-    const transitionendEvtName = getCorrectEventName(window, 'transitionend') as EventType;
+    const transitionendEvtName = getCorrectEventName(
+      window,
+      'transitionend',
+    ) as EventType;
 
     if (this.inTransit_) {
       const onTransitionEnd = () => {
         this.setInTransit_(false);
-        this.adapter_.deregisterThumbContainerInteractionHandler(transitionendEvtName, onTransitionEnd);
+        this.adapter_.deregisterThumbContainerInteractionHandler(
+          transitionendEvtName,
+          onTransitionEnd,
+        );
       };
-      this.adapter_.registerThumbContainerInteractionHandler(transitionendEvtName, onTransitionEnd);
+      this.adapter_.registerThumbContainerInteractionHandler(
+        transitionendEvtName,
+        onTransitionEnd,
+      );
     }
 
     requestAnimationFrame(() => {
@@ -512,8 +565,14 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
       // but IE cannot handle calcs in transforms correctly.
       // See: https://goo.gl/NC2itk
       // Also note that the -50% offset is used to center the slider thumb.
-      this.adapter_.setThumbContainerStyleProperty(transformProp, `translateX(${translatePx}px) translateX(-50%)`);
-      this.adapter_.setTrackStyleProperty(transformProp, `scaleX(${pctComplete})`);
+      this.adapter_.setThumbContainerStyleProperty(
+        transformProp,
+        `translateX(${translatePy}px) translateX(-50%)`,
+      );
+      this.adapter_.setTrackStyleProperty(
+        transformProp,
+        `scaleX(${pctComplete})`,
+      );
     });
   }
 

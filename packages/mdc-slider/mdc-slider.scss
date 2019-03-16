@@ -20,11 +20,11 @@
 // THE SOFTWARE.
 //
 
-@import "@mongol/typography/mixins";
-@import "@mongol/rtl/mixins";
-@import "./keyframes";
-@import "./mixins";
-@import "./variables";
+@import '@mongol/typography/mixins';
+@import '@mongol/rtl/mixins';
+@import './keyframes';
+@import './mixins';
+@import './variables';
 
 // postcss-bem-linter: define slider
 
@@ -69,7 +69,7 @@
     transform-origin: left top;
     will-change: transform;
 
-    @include mdc-rtl(".mdc-slider") {
+    @include mdc-rtl('.mdc-slider') {
       transform-origin: right top;
     }
   }
@@ -80,7 +80,7 @@
     margin-left: -1px;
     visibility: hidden;
 
-    @include mdc-rtl(".mdc-slider") {
+    @include mdc-rtl('.mdc-slider') {
       margin-right: -1px;
       margin-left: 0;
     }
@@ -90,7 +90,7 @@
       display: block;
       width: 2px;
       height: 2px;
-      content: "";
+      content: '';
     }
   }
 
@@ -101,7 +101,7 @@
       display: block;
       width: 2px;
       height: 2px;
-      content: "";
+      content: '';
     }
 
     &:first-child::after {
@@ -111,7 +111,7 @@
 
   &__thumb-container {
     position: absolute;
-    top: 15px;
+    top: 14px;
     left: 0;
     width: 21px;
     // Ensure that touching anywhere within the Y-coordinate space of thumb
@@ -125,15 +125,17 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: scale(.571);
-    transition: transform 100ms ease-out, fill 100ms ease-out, stroke 100ms ease-out;
+    transform: scale(0.571);
+    transition: transform 100ms ease-out, fill 100ms ease-out,
+      stroke 100ms ease-out;
     stroke-width: 3.5;
   }
 
   &__focus-ring {
     width: 21px;
     height: 21px;
-    transition: transform 266.67ms ease-out, opacity 266.67ms ease-out, background-color 266.67ms ease-out;
+    transition: transform 266.67ms ease-out, opacity 266.67ms ease-out,
+      background-color 266.67ms ease-out;
     border-radius: 50%;
     opacity: 0;
   }
@@ -178,7 +180,7 @@
 
   .mdc-slider__focus-ring {
     transform: scale3d(1.55, 1.55, 1.55);
-    opacity: .25;
+    opacity: 0.25;
   }
 }
 
