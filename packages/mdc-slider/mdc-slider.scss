@@ -163,7 +163,11 @@
   &__pin-value-marker {
     @include mdc-typography(body2);
 
-    transform: rotate(45deg);
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+    transform: rotate(-45deg) rotateY(180deg);
   }
 }
 
