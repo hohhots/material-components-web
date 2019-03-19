@@ -10,6 +10,7 @@
     "changelog": "standard-changelog -i CHANGELOG.md -k packages/material-components-web/package.json",
     "clean": "node ./scripts/build/clean",
     "clean:site": "node ./scripts/build/clean --site-generator-tmp",
+    "createLink": "./scripts/create-link.sh",
     "diff": "lerna diff",
     "dist": "npm run build && npm run build:min && npm run build:esmodules",
     "dev": "npm run clean && cross-env MDC_ENV=development webpack-dev-server --config=demos/webpack.config.js --progress --inline --hot --host 0.0.0.0",

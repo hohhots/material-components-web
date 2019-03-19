@@ -121,7 +121,7 @@ Third-party services that we use and are thankful to:
 ##brgd
 
 - npm install
-- npm run dist
-- ./scripts/bootstrap-unreleased.sh
+- npm run createLink
+- npm run build:esmodules
 
 - npm run dev
