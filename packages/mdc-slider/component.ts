@@ -20,11 +20,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+import ResizeObserver from 'resize-observer-polyfill';
 
-import {MDCComponent} from '@mongol/base/component';
-import {MDCSliderAdapter} from './adapter';
-import {strings} from './constants';
-import {MDCSliderFoundation} from './foundation';
+import { MDCComponent } from '@mongol/base/component';
+import { MDCSliderAdapter } from './adapter';
+import { strings } from './constants';
+import { MDCSliderFoundation } from './foundation';
 
 export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
   static attachTo(root: Element) {
@@ -37,6 +38,7 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
   private track_!: HTMLElement; // assigned in initialize()
   private pinValueMarker_!: HTMLElement; // assigned in initialize()
   private trackMarkerContainer_!: HTMLElement; // assigned in initialize()
+  private ro_!: Object;
 
   get value(): number {
     return this.foundation_.getValue();
@@ -79,10 +81,18 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
   }
 
   initialize() {
-    this.thumbContainer_ = this.root_.querySelector<HTMLElement>(strings.THUMB_CONTAINER_SELECTOR)!;
-    this.track_ = this.root_.querySelector<HTMLElement>(strings.TRACK_SELECTOR)!;
-    this.pinValueMarker_ = this.root_.querySelector<HTMLElement>(strings.PIN_VALUE_MARKER_SELECTOR)!;
-    this.trackMarkerContainer_ = this.root_.querySelector<HTMLElement>(strings.TRACK_MARKER_CONTAINER_SELECTOR)!;
+    this.thumbContainer_ = this.root_.querySelector<HTMLElement>(
+      strings.THUMB_CONTAINER_SELECTOR,
+    )!;
+    this.track_ = this.root_.querySelector<HTMLElement>(
+      strings.TRACK_SELECTOR,
+    )!;
+    this.pinValueMarker_ = this.root_.querySelector<HTMLElement>(
+      strings.PIN_VALUE_MARKER_SELECTOR,
+    )!;
+    this.trackMarkerContainer_ = this.root_.querySelector<HTMLElement>(
+      strings.TRACK_MARKER_CONTAINER_SELECTOR,
+    )!;
   }
 
   getDefaultFoundation() {
@@ -98,25 +108,36 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
       removeAttribute: (name) => this.root_.removeAttribute(name),
       computeBoundingRect: () => this.root_.getBoundingClientRect(),
       getTabIndex: () => this.root_.tabIndex,
-      registerInteractionHandler: (evtType, handler) => this.listen(evtType, handler),
-      deregisterInteractionHandler: (evtType, handler) => this.unlisten(evtType, handler),
+      registerInteractionHandler: (evtType, handler) =>
+        this.listen(evtType, handler),
+      deregisterInteractionHandler: (evtType, handler) =>
+        this.unlisten(evtType, handler),
       registerThumbContainerInteractionHandler: (evtType, handler) => {
         this.thumbContainer_.addEventListener(evtType, handler);
       },
       deregisterThumbContainerInteractionHandler: (evtType, handler) => {
         this.thumbContainer_.removeEventListener(evtType, handler);
       },
-      registerBodyInteractionHandler: (evtType, handler) => document.body.addEventListener(evtType, handler),
-      deregisterBodyInteractionHandler: (evtType, handler) => document.body.removeEventListener(evtType, handler),
-      registerResizeHandler: (handler) => window.addEventListener('resize', handler),
-      deregisterResizeHandler: (handler) => window.removeEventListener('resize', handler),
+      registerBodyInteractionHandler: (evtType, handler) =>
+        document.body.addEventListener(evtType, handler),
+      deregisterBodyInteractionHandler: (evtType, handler) =>
+        document.body.removeEventListener(evtType, handler),
+      registerResizeHandler: (handler) => {
+        this.ro_ = new ResizeObserver(() => {
+          handler();
+        });
+        (this.ro_ as any).observe(this.root_);
+      },
+      deregisterResizeHandler: () => (this.ro_ as any).disconnect(),
       notifyInput: () => this.emit<MDCSlider>(strings.INPUT_EVENT, this), // TODO(acdvorak): Create detail interface
       notifyChange: () => this.emit<MDCSlider>(strings.CHANGE_EVENT, this), // TODO(acdvorak): Create detail interface
       setThumbContainerStyleProperty: (propertyName, value) => {
         this.thumbContainer_.style.setProperty(propertyName, value);
       },
-      setTrackStyleProperty: (propertyName, value) => this.track_.style.setProperty(propertyName, value),
-      setMarkerValue: (value) => this.pinValueMarker_.innerText = value.toLocaleString(),
+      setTrackStyleProperty: (propertyName, value) =>
+        this.track_.style.setProperty(propertyName, value),
+      setMarkerValue: (value) =>
+        (this.pinValueMarker_.innerText = value.toLocaleString()),
       appendTrackMarkers: (numMarkers) => {
         const frag = document.createDocumentFragment();
         for (let i = 0; i < numMarkers; i++) {
@@ -128,12 +149,16 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
       },
       removeTrackMarkers: () => {
         while (this.trackMarkerContainer_.firstChild) {
-          this.trackMarkerContainer_.removeChild(this.trackMarkerContainer_.firstChild);
+          this.trackMarkerContainer_.removeChild(
+            this.trackMarkerContainer_.firstChild,
+          );
         }
       },
       setLastTrackMarkersStyleProperty: (propertyName, value) => {
         // We remove and append new nodes, thus, the last track marker must be dynamically found.
-        const lastTrackMarker = this.root_.querySelector<HTMLElement>(strings.LAST_TRACK_MARKER_SELECTOR)!;
+        const lastTrackMarker = this.root_.querySelector<HTMLElement>(
+          strings.LAST_TRACK_MARKER_SELECTOR,
+        )!;
         lastTrackMarker.style.setProperty(propertyName, value);
       },
       isRTL: () => getComputedStyle(this.root_).direction === 'rtl',
@@ -143,9 +168,18 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
   }
 
   initialSyncWithDOM() {
-    const origValueNow = this.parseFloat_(this.root_.getAttribute(strings.ARIA_VALUENOW), this.value);
-    const min = this.parseFloat_(this.root_.getAttribute(strings.ARIA_VALUEMIN), this.min);
-    const max = this.parseFloat_(this.root_.getAttribute(strings.ARIA_VALUEMAX), this.max);
+    const origValueNow = this.parseFloat_(
+      this.root_.getAttribute(strings.ARIA_VALUENOW),
+      this.value,
+    );
+    const min = this.parseFloat_(
+      this.root_.getAttribute(strings.ARIA_VALUEMIN),
+      this.min,
+    );
+    const max = this.parseFloat_(
+      this.root_.getAttribute(strings.ARIA_VALUEMAX),
+      this.max,
+    );
 
     // min and max need to be set in the right order to avoid throwing an error
     // when the new min is greater than the default max.
@@ -157,12 +191,14 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
       this.max = max;
     }
 
-    this.step = this.parseFloat_(this.root_.getAttribute(strings.STEP_DATA_ATTR), this.step);
-    this.value = origValueNow;
-    this.disabled = (
-        this.root_.hasAttribute(strings.ARIA_DISABLED) &&
-        this.root_.getAttribute(strings.ARIA_DISABLED) !== 'false'
+    this.step = this.parseFloat_(
+      this.root_.getAttribute(strings.STEP_DATA_ATTR),
+      this.step,
     );
+    this.value = origValueNow;
+    this.disabled =
+      this.root_.hasAttribute(strings.ARIA_DISABLED) &&
+      this.root_.getAttribute(strings.ARIA_DISABLED) !== 'false';
     this.foundation_.setupTrackMarker();
   }
 
@@ -170,11 +206,11 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
     this.foundation_.layout();
   }
 
-  stepUp(amount = (this.step || 1)) {
+  stepUp(amount = this.step || 1) {
     this.value += amount;
   }
 
-  stepDown(amount = (this.step || 1)) {
+  stepDown(amount = this.step || 1) {
     this.value -= amount;
   }
 

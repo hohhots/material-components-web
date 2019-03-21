@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-import {EventType, SpecificEventListener} from '@mongol/base/types';
+import { EventType, SpecificEventListener } from '@mongol/base/types';
 
 /**
  * Defines the shape of the adapter expected by the foundation.
@@ -74,42 +74,60 @@ export interface MDCSliderAdapter {
   /**
    * Registers an event handler on the root element for a given event.
    */
-  registerInteractionHandler<K extends EventType>(evtType: K, handler: SpecificEventListener<K>): void;
+  registerInteractionHandler<K extends EventType>(
+    evtType: K,
+    handler: SpecificEventListener<K>,
+  ): void;
 
   /**
    * Deregisters an event handler on the root element for a given event.
    */
-  deregisterInteractionHandler<K extends EventType>(evtType: K, handler: SpecificEventListener<K>): void;
+  deregisterInteractionHandler<K extends EventType>(
+    evtType: K,
+    handler: SpecificEventListener<K>,
+  ): void;
 
   /**
    * Registers an event handler on the thumb container element for a given event.
    */
-  registerThumbContainerInteractionHandler<K extends EventType>(evtType: K, handler: SpecificEventListener<K>): void;
+  registerThumbContainerInteractionHandler<K extends EventType>(
+    evtType: K,
+    handler: SpecificEventListener<K>,
+  ): void;
 
   /**
    * Deregisters an event handler on the thumb container element for a given event.
    */
-  deregisterThumbContainerInteractionHandler<K extends EventType>(evtType: K, handler: SpecificEventListener<K>): void;
+  deregisterThumbContainerInteractionHandler<K extends EventType>(
+    evtType: K,
+    handler: SpecificEventListener<K>,
+  ): void;
 
   /**
    * Registers an event handler on the body for a given event.
    */
-  registerBodyInteractionHandler<K extends EventType>(evtType: K, handler: SpecificEventListener<K>): void;
+  registerBodyInteractionHandler<K extends EventType>(
+    evtType: K,
+    handler: SpecificEventListener<K>,
+  ): void;
 
   /**
    * Deregisters an event handler on the body for a given event.
    */
-  deregisterBodyInteractionHandler<K extends EventType>(evtType: K, handler: SpecificEventListener<K>): void;
+  deregisterBodyInteractionHandler<K extends EventType>(
+    evtType: K,
+    handler: SpecificEventListener<K>,
+  ): void;
 
   /**
    * Registers an event handler for the window resize event
    */
-  registerResizeHandler(handler: SpecificEventListener<'resize'>): void;
+  registerResizeHandler(handler: any): void;
 
   /**
    * Deregisters an event handler for the window resize event
    */
-  deregisterResizeHandler(handler: SpecificEventListener<'resize'>): void;
+  deregisterResizeHandler(handler: any): void;
 
   /**
    * Emits a custom event MDCSlider:input from the root

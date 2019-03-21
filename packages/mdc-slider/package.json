@@ -25,6 +25,7 @@
     "@mongol/rtl": "^0.42.0",
     "@mongol/theme": "^1.0.0",
     "@mongol/typography": "^1.0.0",
+    "resize-observer-polyfill": "^1.5.0",
     "tslib": "^1.9.3"
   }
 }

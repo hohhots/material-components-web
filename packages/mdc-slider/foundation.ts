@@ -389,7 +389,6 @@ export class MDCSliderFoundation extends MDCFoundation<MDCSliderAdapter> {
    * Computes the new value from the pageY position
    */
   private computeValueFromPageY_(pageY: number): number {
-    console.log(this.rect_);
     const { max_: max, min_: min } = this;
     const yPos = pageY - this.rect_.top;
     let pctComplete = yPos / this.rect_.height;
