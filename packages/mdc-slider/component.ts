@@ -128,7 +128,7 @@ export class MDCSlider extends MDCComponent<MDCSliderFoundation> {
         });
         (this.ro_ as any).observe(this.root_);
       },
-      deregisterResizeHandler: () => (this.ro_ as any).disconnect(),
+      deregisterResizeHandler: () => (this.ro_ as any).disconnect(this.root_),
       notifyInput: () => this.emit<MDCSlider>(strings.INPUT_EVENT, this), // TODO(acdvorak): Create detail interface
       notifyChange: () => this.emit<MDCSlider>(strings.CHANGE_EVENT, this), // TODO(acdvorak): Create detail interface
       setThumbContainerStyleProperty: (propertyName, value) => {
