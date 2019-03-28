@@ -1,7 +1,7 @@
 {
   "name": "@mongol/button",
   "description": "The Material Components for the web button component",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "license": "MIT",
   "keywords": [
     "material components",
@@ -13,12 +13,12 @@
     "url": "https://github.com/material-components/material-components-web.git"
   },
   "dependencies": {
-    "@mongol/elevation": "^1.0.0",
+    "@mongol/elevation": "^1.1.0",
     "@mongol/feature-targeting": "^0.44.1",
-    "@mongol/ripple": "^1.0.1",
+    "@mongol/ripple": "^1.1.0",
     "@mongol/rtl": "^0.42.0",
     "@mongol/shape": "^1.0.0",
-    "@mongol/theme": "^1.0.0",
+    "@mongol/theme": "^1.1.0",
     "@mongol/typography": "^1.0.0"
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "@mongol/switch",
   "description": "The Material Components for the web switch component",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "license": "MIT",
   "keywords": [
     "material components",
@@ -19,12 +19,12 @@
   "dependencies": {
     "@mongol/animation": "^1.0.0",
     "@mongol/base": "^1.0.0",
-    "@mongol/dom": "^1.0.1",
-    "@mongol/elevation": "^1.0.0",
+    "@mongol/dom": "^1.1.0",
+    "@mongol/elevation": "^1.1.0",
     "@mongol/feature-targeting": "^0.44.1",
-    "@mongol/ripple": "^1.0.1",
+    "@mongol/ripple": "^1.1.0",
     "@mongol/rtl": "^0.42.0",
-    "@mongol/theme": "^1.0.0",
+    "@mongol/theme": "^1.1.0",
     "tslib": "^1.9.3"
   },
   "publishConfig": {

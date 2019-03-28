@@ -1,7 +1,7 @@
 {
   "name": "@mongol/tab",
   "description": "The Material Components for the web tab component",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "license": "MIT",
   "keywords": [
     "material components",
@@ -18,10 +18,10 @@
   "types": "dist/mdc.tab.d.ts",
   "dependencies": {
     "@mongol/base": "^1.0.0",
-    "@mongol/ripple": "^1.0.1",
+    "@mongol/ripple": "^1.1.0",
     "@mongol/rtl": "^0.42.0",
-    "@mongol/tab-indicator": "^1.0.0",
-    "@mongol/theme": "^1.0.0",
+    "@mongol/tab-indicator": "^1.1.0",
+    "@mongol/theme": "^1.1.0",
     "@mongol/typography": "^1.0.0",
     "tslib": "^1.9.3"
   },
