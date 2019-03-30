@@ -21,15 +21,20 @@
  * THE SOFTWARE.
  */
 
-import {MDCComponent} from '@mongol/base/component';
-import {MDCFloatingLabelFoundation} from '@mongol/floating-label/foundation';
-import {MDCNotchedOutlineAdapter} from './adapter';
-import {cssClasses, strings} from './constants';
-import {MDCNotchedOutlineFoundation} from './foundation';
+import { MDCComponent } from '@mongol/base/component';
+import { MDCFloatingLabelFoundation } from '@mongol/floating-label/foundation';
+import { MDCNotchedOutlineAdapter } from './adapter';
+import { cssClasses, strings } from './constants';
+import { MDCNotchedOutlineFoundation } from './foundation';
 
-export type MDCNotchedOutlineFactory = (el: Element, foundation?: MDCNotchedOutlineFoundation) => MDCNotchedOutline;
+export type MDCNotchedOutlineFactory = (
+  el: Element,
+  foundation?: MDCNotchedOutlineFoundation,
+) => MDCNotchedOutline;
 
-export class MDCNotchedOutline extends MDCComponent<MDCNotchedOutlineFoundation> {
+export class MDCNotchedOutline extends MDCComponent<
+  MDCNotchedOutlineFoundation
+> {
   static attachTo(root: Element): MDCNotchedOutline {
     return new MDCNotchedOutline(root);
   }
@@ -37,9 +42,13 @@ export class MDCNotchedOutline extends MDCComponent<MDCNotchedOutlineFoundation>
   private notchElement_!: HTMLElement; // assigned in initialSyncWithDOM()
 
   initialSyncWithDOM() {
-    this.notchElement_ = this.root_.querySelector<HTMLElement>(strings.NOTCH_ELEMENT_SELECTOR)!;
+    this.notchElement_ = this.root_.querySelector<HTMLElement>(
+      strings.NOTCH_ELEMENT_SELECTOR,
+    )!;
 
-    const label = this.root_.querySelector<HTMLElement>('.' + MDCFloatingLabelFoundation.cssClasses.ROOT);
+    const label = this.root_.querySelector<HTMLElement>(
+      '.' + MDCFloatingLabelFoundation.cssClasses.ROOT,
+    );
     if (label) {
       label.style.transitionDuration = '0s';
       this.root_.classList.add(cssClasses.OUTLINE_UPGRADED);
@@ -73,8 +82,10 @@ export class MDCNotchedOutline extends MDCComponent<MDCNotchedOutlineFoundation>
     const adapter: MDCNotchedOutlineAdapter = {
       addClass: (className) => this.root_.classList.add(className),
       removeClass: (className) => this.root_.classList.remove(className),
-      setNotchWidthProperty: (width) => this.notchElement_.style.setProperty('width', width + 'px'),
-      removeNotchWidthProperty: () => this.notchElement_.style.removeProperty('width'),
+      setNotchWidthProperty: (width) =>
+        this.notchElement_.style.setProperty('width', width + 'px'),
+      removeNotchWidthProperty: () =>
+        this.notchElement_.style.removeProperty('width'),
     };
     // tslint:enable:object-literal-sort-keys
     return new MDCNotchedOutlineFoundation(adapter);
